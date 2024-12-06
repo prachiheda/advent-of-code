@@ -17,7 +17,9 @@ Welcome to my **Advent of Code 2024** repository! 🎁 This is where the magic o
 | Day 🎅 | Puzzle Link 🔗 | Solution 🎉 | 
 |-------|----------------|-------------| 
 | Day 1 | [Puzzle](https://adventofcode.com/2024/day/1) | [Solution](day1/Solution.java) |  
-| Day 2 | [Puzzle](https://adventofcode.com/2024/day/2) | Coming soon! 🎄 |  
+| Day 2 | [Puzzle](https://adventofcode.com/2024/day/2) | [Solution](day2/Solution.java) |  
+| Day 3 | [Puzzle](https://adventofcode.com/2024/day/3) | [Solution](day3/Solution3.java) |  
+| Day 4 | [Puzzle](https://adventofcode.com/2024/day/4) | [Solution](day4/Solution4.java) |
 | ...   | ...            | ...         |  
 
 ---

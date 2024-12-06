@@ -1,59 +1,71 @@
---- Day 2: Red-Nosed Reports ---
-Fortunately, the first location The Historians want to search isn't a long walk from the Chief Historian's office.
+--- Day 4: Ceres Search ---
+"Looks like the Chief's not here. Next!" One of The Historians pulls out a device and pushes the only button on it. After a brief flash, you recognize the interior of the Ceres monitoring station!
 
-While the Red-Nosed Reindeer nuclear fusion/fission plant appears to contain no sign of the Chief Historian, the engineers there run up to you as soon as they see you. Apparently, they still talk about the time Rudolph was saved through molecular synthesis from a single electron.
+As the search for the Chief continues, a small Elf who lives on the station tugs on your shirt; she'd like to know if you could help her with her word search (your puzzle input). She only has to find one word: XMAS.
 
-They're quick to add that - since you're already here - they'd really appreciate your help analyzing some unusual data from the Red-Nosed reactor. You turn to check if The Historians are waiting for you, but they seem to have already divided into groups that are currently searching every corner of the facility. You offer to help with the unusual data.
+This word search allows words to be horizontal, vertical, diagonal, written backwards, or even overlapping other words. It's a little unusual, though, as you don't merely need to find one instance of XMAS - you need to find all of them. Here are a few ways XMAS might appear, where irrelevant characters have been replaced with .:
 
-The unusual data (your puzzle input) consists of many reports, one report per line. Each report is a list of numbers called levels that are separated by spaces. For example:
 
-7 6 4 2 1
-1 2 7 8 9
-9 7 6 2 1
-1 3 2 4 5
-8 6 4 4 1
-1 3 6 7 9
-This example data contains six reports each containing five levels.
+..X...
+.SAMX.
+.A..A.
+XMAS.S
+.X....
+The actual word search will be full of letters instead. For example:
 
-The engineers are trying to figure out which reports are safe. The Red-Nosed reactor safety systems can only tolerate levels that are either gradually increasing or gradually decreasing. So, a report only counts as safe if both of the following are true:
+MMMSXXMASM
+MSAMXMSMSA
+AMXSXMAAMM
+MSAMASMSMX
+XMASAMXAMM
+XXAMMXXAMA
+SMSMSASXSS
+SAXAMASAAA
+MAMMMXMMMM
+MXMXAXMASX
+In this word search, XMAS occurs a total of 18 times; here's the same word search again, but where letters not involved in any XMAS have been replaced with .:
 
-The levels are either all increasing or all decreasing.
-Any two adjacent levels differ by at least one and at most three.
-In the example above, the reports can be found safe or unsafe by checking those rules:
-
-7 6 4 2 1: Safe because the levels are all decreasing by 1 or 2.
-1 2 7 8 9: Unsafe because 2 7 is an increase of 5.
-9 7 6 2 1: Unsafe because 6 2 is a decrease of 4.
-1 3 2 4 5: Unsafe because 1 3 is increasing but 3 2 is decreasing.
-8 6 4 4 1: Unsafe because 4 4 is neither an increase or a decrease.
-1 3 6 7 9: Safe because the levels are all increasing by 1, 2, or 3.
-So, in this example, 2 reports are safe.
-
-Analyze the unusual data from the engineers. How many reports are safe?
+....XXMAS.
+.SAMXMS...
+...S..A...
+..A.A.MS.X
+XMASAMX.MM
+X.....XA.A
+S.S.S.S.SS
+.A.A.A.A.A
+..M.M.M.MM
+.X.X.XMASX
+Take a look at the little Elf's word search. How many times does XMAS appear?
 
 To begin, get your puzzle input.
 
-Answer: 516
+Answer: 2591
+
 
 --- Part Two ---
+The Elf looks quizzically at you. Did you misunderstand the assignment?
 
-The engineers are surprised by the low number of safe reports until they realize they forgot to tell you about the Problem Dampener.
+Looking for the instructions, you flip over the word search to find that this isn't actually an XMAS puzzle; it's an X-MAS puzzle in which you're supposed to find two MAS in the shape of an X. One way to achieve that is like this:
 
-The Problem Dampener is a reactor-mounted module that lets the reactor safety systems tolerate a single bad level in what would otherwise be a safe report. It's like the bad level never happened!
+M.S
+.A.
+M.S
+Irrelevant characters have again been replaced with . in the above diagram. Within the X, each MAS can be written forwards or backwards.
 
-Now, the same rules apply as before, except if removing a single level from an unsafe report would make it safe, the report instead counts as safe.
+Here's the same example from before, but this time all of the X-MASes have been kept instead:
 
-More of the above example's reports are now safe:
+.M.S......
+..A..MSMS.
+.M.S.MAA..
+..A.ASMSM.
+.M.S.M....
+..........
+S.S.S.S.S.
+.A.A.A.A..
+M.M.M.M.M.
+..........
+In this example, an X-MAS appears 9 times.
 
-7 6 4 2 1: Safe without removing any level.
-1 2 7 8 9: Unsafe regardless of which level is removed.
-9 7 6 2 1: Unsafe regardless of which level is removed.
-1 3 2 4 5: Safe by removing the second level, 3.
-8 6 4 4 1: Safe by removing the third level, 4.
-1 3 6 7 9: Safe without removing any level.
-Thanks to the Problem Dampener, 4 reports are actually safe!
+Flip the word search from the instructions back over to the word search side and try again. How many times does an X-MAS appear?
 
-Update your analysis by handling situations where the Problem Dampener can remove a single level from unsafe reports. How many reports are now safe?
-
-Answer: 
- 
+Answer: 1880
